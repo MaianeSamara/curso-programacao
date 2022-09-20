@@ -9,13 +9,16 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		double R, A, pi = 3.14159;
+		int A, B, C, D, diferença;
 		
-		R = sc.nextDouble();
+		A = sc.nextInt();
+		B = sc.nextInt();
+		C = sc.nextInt();
+		D = sc.nextInt();
 		
-		A = pi * R * R;
+		diferença = A * B - C * D;
 
-		System.out.printf("A=%.4f%n", A);
+		System.out.println("DIFERENÇA = " + diferença);
 
 		sc.close();
 		
