@@ -9,16 +9,17 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int A, B, C, D, diferença;
+		int numero, horas;
+		double valorHoras, salario;
 		
-		A = sc.nextInt();
-		B = sc.nextInt();
-		C = sc.nextInt();
-		D = sc.nextInt();
+		numero = sc.nextInt();
+		horas = sc.nextInt();
+		valorHoras = sc.nextDouble();
 		
-		diferença = A * B - C * D;
+		salario = valorHoras * horas;
 
-		System.out.println("DIFERENÇA = " + diferença);
+		System.out.println("NUMBER = " + numero);
+		System.out.printf("SALARY = U$ %.2f%n", salario);
 
 		sc.close();
 		
