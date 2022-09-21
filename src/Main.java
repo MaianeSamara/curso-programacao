@@ -8,20 +8,23 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int cod1, qtd1, cod2, qtd2;
-		double valor1, valor2, total;
+		double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
 		
-		cod1 = sc.nextInt();
-		qtd1 = sc.nextInt();
-		valor1 = sc.nextDouble();
+		A = sc.nextDouble();
+		B = sc.nextDouble();
+		C = sc.nextDouble();
 		
-		cod2 = sc.nextInt();
-		qtd2 = sc.nextInt();
-		valor2 = sc.nextDouble();
+		triangulo = A * C / 2.0;
+		circulo = 3.14159 * C * C;
+		trapezio = (A + B) * C / 2.0;
+		quadrado = B * B;
+		retangulo = A * B;
 		
-		total = qtd1 * valor1 + qtd2 * valor2;
-
-		System.out.printf("VALOR A PAGAR = R$ %.2f%n", total);
+		System.out.printf("TRIANGULO = %.3f%n", triangulo);
+		System.out.printf("CIRCULO = %.3f%n", circulo);
+		System.out.printf("TRAPEZIO = %.3f%n", trapezio);
+		System.out.printf("QUADRADO = %.3f%n", quadrado);
+		System.out.printf("RETANGULO = %.3f%n", retangulo);
 
 		sc.close();
 		
