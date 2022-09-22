@@ -8,12 +8,12 @@ public class Main {
 		
 		int N = sc.nextInt();
 
-		if ( N < 0) {
-			System.out.println("NEGATIVO");
+		if ( N %2 == 0) {
+			System.out.println("PAR");
 		}
 
 		else {
-			System.out.println("NÃO NEGATIVO");
+			System.out.println("ÍMPAR");
 		} 
 	
 		sc.close();
