@@ -5,35 +5,31 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int codigo = sc.nextInt();
-		int quantidade = sc.nextInt();
+		double valor = sc.nextDouble();
 
-		Locale.setDefault(Locale.US);
-
-		double total;
-		if (codigo == 1) {
-			total = quantidade * 4.0;
+		if (valor < 0.0 || valor > 100.0) {
+			System.out.println("Fora de Intervalo");
 		}
 
-		else if (codigo == 2) {
-			total = quantidade * 4.5;
+		else if (valor <= 25.0) {
+			System.out.println("Intervalo [0,25]");
 		}
 
-		else if (codigo == 3) {
-			total = quantidade * 5.0;
+		else if (valor <= 50.0) {
+			System.out.println("Intervalo (25,50]");
 		}
 
-		else if (codigo == 4) {
-			total = quantidade * 2.0;
+		else if (valor <= 75.0) {
+			System.out.println("Intervalo (50,75]");
 		}
 
 		else {
-			total = quantidade * 1.5;
+			System.out.println("Intervalo (75,100]");
 		}
 
-		System.out.printf("Total: R$ %.2f%n", total);
 		sc.close();
 	}
 }
