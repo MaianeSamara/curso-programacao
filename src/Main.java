@@ -5,22 +5,17 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int hora;
+		
+		int N = sc.nextInt();
 
-		System.out.println("Quantas horas?");
-		hora = sc.nextInt();
-
-		if (hora < 12) {
-			System.out.println("Bom dia");
+		if ( N < 0) {
+			System.out.println("NEGATIVO");
 		}
 
-		else if (hora < 18) {
-			System.out.println("Boa tarde");
-		} 
 		else {
-			System.out.println("Boa noite");
-		}
-
+			System.out.println("NÃO NEGATIVO");
+		} 
+	
 		sc.close();
 	}
 }
