@@ -8,28 +8,37 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double valor = sc.nextDouble();
+		double X = sc.nextDouble();
+		double Y = sc.nextDouble();
 
-		if (valor < 0.0 || valor > 100.0) {
-			System.out.println("Fora de Intervalo");
+		if (X == 0.0 && Y == 0.0) {
+			System.out.println("Origem");
 		}
 
-		else if (valor <= 25.0) {
-			System.out.println("Intervalo [0,25]");
+		else if (X == 0.0) {
+			System.out.println("Eixo X");
 		}
 
-		else if (valor <= 50.0) {
-			System.out.println("Intervalo (25,50]");
+		else if (Y == 0.0) {
+			System.out.println("Eixo Y");
 		}
 
-		else if (valor <= 75.0) {
-			System.out.println("Intervalo (50,75]");
+		else if (X > 0.0 && Y > 0.0) {
+			System.out.println("Q1");
+		}
+
+		else if (X < 0.0 && Y > 0.0) {
+			System.out.println("Q2");
+		}
+		
+		else if (X < 0.0 && Y < 0.0) {
+			System.out.println("Q3");
 		}
 
 		else {
-			System.out.println("Intervalo (75,100]");
+			System.out.println("Q4");
 		}
-
+		
 		sc.close();
 	}
 }
