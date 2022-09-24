@@ -8,33 +8,16 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double salario = sc.nextDouble();
+		int minutos = sc.nextInt();
 		
-		double impostoRenda;
-		if (salario <= 2000.0) {
-			impostoRenda = 0.0;
-		}
-
-		else if (salario <= 3000.0) {
-			impostoRenda = (salario - 2000.0) * 0.08;
-		}
-
-		else if (salario <= 4500.0) {
-			impostoRenda = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
-		}
-
-		else {
-			impostoRenda = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
-		}
-
-		if (impostoRenda == 0.0) {
-			System.out.println("Isento");
+		double conta = 50.0;
+		if (minutos > 100) {
+			conta += (minutos - 100) *2.0; 
 		}
 		
-		else {
-			System.out.printf("R$ %.2f%n", impostoRenda);
-		}
+		System.out.printf("Valor da conta = R$ %.2f%n", conta);
+		
 		
 		sc.close();
 		}
-	}
+}
