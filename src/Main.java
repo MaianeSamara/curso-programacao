@@ -8,37 +8,33 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double X = sc.nextDouble();
-		double Y = sc.nextDouble();
-
-		if (X == 0.0 && Y == 0.0) {
-			System.out.println("Origem");
-		}
-
-		else if (X == 0.0) {
-			System.out.println("Eixo X");
-		}
-
-		else if (Y == 0.0) {
-			System.out.println("Eixo Y");
-		}
-
-		else if (X > 0.0 && Y > 0.0) {
-			System.out.println("Q1");
-		}
-
-		else if (X < 0.0 && Y > 0.0) {
-			System.out.println("Q2");
-		}
+		double salario = sc.nextDouble();
 		
-		else if (X < 0.0 && Y < 0.0) {
-			System.out.println("Q3");
+		double impostoRenda;
+		if (salario <= 2000.0) {
+			impostoRenda = 0.0;
+		}
+
+		else if (salario <= 3000.0) {
+			impostoRenda = (salario - 2000.0) * 0.08;
+		}
+
+		else if (salario <= 4500.0) {
+			impostoRenda = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
 		}
 
 		else {
-			System.out.println("Q4");
+			impostoRenda = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+		}
+
+		if (impostoRenda == 0.0) {
+			System.out.println("Isento");
+		}
+		
+		else {
+			System.out.printf("R$ %.2f%n", impostoRenda);
 		}
 		
 		sc.close();
+		}
 	}
-}
