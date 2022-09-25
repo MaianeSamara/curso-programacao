@@ -8,45 +8,11 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int x = sc.nextInt();
-		String dia;
-
-		switch (x) {
-		case 1:
-			dia = "domingo";
-			break;
-
-		case 2:
-			dia = "segunda";
-			break;
-
-		case 3:
-			dia = "terca";
-			break;
-
-		case 4:
-			dia = "quarta";
-			break;
-
-		case 5:
-			dia = "quinta";
-			break;
-
-		case 6:
-			dia = "sexta";
-			break;
-
-		case 7:
-			dia = "sabado";
-			break;
+		double preco = 34.5;
+		double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;	
 		
-		default:
-			dia = "valor invalido";
-			break;
-		}
-
-		System.out.println("Dia da semana: " + dia);
-
+		System.out.println(desconto);
+		
 		sc.close();
 	}
 }
