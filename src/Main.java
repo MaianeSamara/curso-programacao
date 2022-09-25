@@ -1,18 +1,20 @@
-import java.util.Locale;
-import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
+		double price = 400.00;
 
-		double preco = 34.5;
-		double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;	
-		
-		System.out.println(desconto);
-		
-		sc.close();
+		double discount = 0;
+
+		if (price < 200.00) {
+			discount = price * 0.1;
+		} 
+		else {
+			discount = 0;
+		}
+
+		System.out.println(discount);
+
 	}
 }
