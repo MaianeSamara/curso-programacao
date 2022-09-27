@@ -6,32 +6,33 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		
+		int alcool = 0;
+		int gasolina = 0;
+		int diesel = 0;
 
+		int tipo = sc.nextInt();
 
-		while (x != 0 && y != 0) {
-			if (x > 0 && y > 0) {
-				System.out.println("Primeiro");
+		while (tipo != 4) {
+			if (tipo == 1) {
+				alcool = alcool + 1;
 			}
 
-			else if (x < 0 && y > 0) {
-				System.out.println("Segundo");
+			else if (tipo == 2) {
+				gasolina = gasolina + 1;
 			}
 
-			else if (x < 0 && y < 0) {
-				System.out.println("Terceiro");
+			else if (tipo == 3) {
+				diesel = diesel + 1;
 			}
 
-			else {
-				System.out.println("Quarto");
-			}
-			
-			x = sc.nextInt();
-			y = sc.nextInt();
-			
+			tipo = sc.nextInt();
 		}
-			sc.close();
-		}
+
+		System.out.println("Alcool: " + alcool);
+		System.out.println("Gasolina: " + gasolina);
+		System.out.println("Diesel: " + diesel);
+		System.out.println("Muito Obrigado!");
+
+		sc.close();
 	}
+}
