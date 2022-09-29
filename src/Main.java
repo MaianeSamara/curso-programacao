@@ -7,20 +7,14 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-
-		for (int i=0; i<n; i++) {
-			
-			int x = sc.nextInt();
-			int y = sc.nextInt();
-			
-			if(y == 0) {	
-			System.out.println("Divisão Impossivel");
+		
+		int fator = 1;
+		for (int i=1; i<=n; i++) {
+			fator = fator * i;
 		}
-			else {
-				double divisao = (double) x / y;
-				System.out.printf("%.1f%n", divisao);
-	}
-		}
+				
+			System.out.println(fator);
+		
 		sc.close();
 	}
 }
