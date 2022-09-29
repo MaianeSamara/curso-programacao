@@ -8,13 +8,14 @@ public class Main {
 
 		int n = sc.nextInt();
 
-		for (int i = 1; i <= n; i++) {
-			if (n % i == 0) {
+		for (int i=1; i<=n; i++) {
+			
+			int linha1 = i;
+			int linha2 = i * i;
+			int linha3 = i * i * i;
 
-				System.out.println(i);
+				System.out.printf("%d %d %d%n", linha1, linha2, linha3);
 			}
-
-		}
 
 		sc.close();
 	}
