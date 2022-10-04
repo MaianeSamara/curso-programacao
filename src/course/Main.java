@@ -1,18 +1,28 @@
 package course;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		String s = "potato apple lemon orange";
+		Scanner sc = new Scanner(System.in);
 		
-		String[] vect = s.split(" ");
+		System.out.println("Enter three numbers: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
 		
+		if (a > b && a > c) {
+			System.out.println("Higher = " + a);
+		}
+		else if (b > c) {
+			System.out.println("Higher = " + b);
+		}
+		else {
+			System.out.println("Higher = " + c);
+		}
 		
-		System.out.println(vect[0]);
-		System.out.println(vect[1]);
-		System.out.println(vect[2]);
-		System.out.println(vect[3]);
-				
+		sc.close();
 	}
 }
